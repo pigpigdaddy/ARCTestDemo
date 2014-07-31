@@ -73,9 +73,9 @@
     if (view) {
         [view removeFromSuperview];
     }
-    
+}
+
 //    [self.testView removeFromSuperview];
 //    self.testView = nil;
-}
 
 @end
