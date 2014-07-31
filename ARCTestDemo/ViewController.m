@@ -37,18 +37,18 @@
     [self.button addTarget:self action:@selector(removeTestView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.button];
     
-//    ARCTestView *testView = [[ARCTestView alloc] init];
-//    testView.frame = CGRectMake(0, 80, 320, 350);
-//    testView.backgroundColor = [UIColor redColor];
-//    testView.tag = 100;
-//    [testView addSubview:self.testView];
-
-    self.testView = [[ARCTestView alloc] init];
-    self.testView.frame = CGRectMake(0, 80, 320, 350);
-    self.testView.backgroundColor = [UIColor redColor];
-    self.testView.tag = 100;
-    [self.view addSubview:self.testView];
+    ARCTestView *testView = [[ARCTestView alloc] init];
+    testView.frame = CGRectMake(0, 80, 320, 350);
+    testView.backgroundColor = [UIColor redColor];
+    testView.tag = 100;
+    [self.view addSubview:testView];
 }
+
+//    self.testView = [[ARCTestView alloc] init];
+//    self.testView.frame = CGRectMake(0, 80, 320, 350);
+//    self.testView.backgroundColor = [UIColor redColor];
+//    self.testView.tag = 100;
+//    [self.view addSubview:self.testView];
 
 - (void)didReceiveMemoryWarning
 {
@@ -69,13 +69,13 @@
 
 - (void)removeTestView:(id)sender
 {
-//    UIView *view = [self.view viewWithTag:100];
-//    if (view) {
-//        [view removeFromSuperview];
-//    }
+    UIView *view = [self.view viewWithTag:100];
+    if (view) {
+        [view removeFromSuperview];
+    }
     
-    [self.testView removeFromSuperview];
-    self.testView = nil;
+//    [self.testView removeFromSuperview];
+//    self.testView = nil;
 }
 
 @end
